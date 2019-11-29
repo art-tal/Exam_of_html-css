@@ -1,13 +1,18 @@
-aside hr {
+aside hr, main .plans .plans__plan hr {
   margin: 0;
   border: none;
   border-bottom: 2px solid #D2D2D2; }
 
-aside header h1 {
+aside header h1, main h1 {
   font-size: 24px;
   padding: 30px;
   margin: 0;
   color: #333; }
+
+main .plans .plans__plan {
+  border: 1px solid #D2D2D2;
+  -webkit-box-shadow: 3px 3px 3px #bbb;
+  box-shadow: 3px 3px 3px #bbb; }
 
 * {
   margin: 0;
@@ -102,3 +107,72 @@ aside {
             background-image: url(../img/notify_white.png); }
           aside menu ul li a[name="support"].active, aside menu ul li a[name="support"]:hover {
             background-image: url(../img/support_white.png); }
+
+main {
+  margin-left: 253px;
+  padding: 30px; }
+  main h1 {
+    margin: 0;
+    padding: 0; }
+  main .plans {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    main .plans .plans__plan {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+      position: relative;
+      padding: 15px 10px;
+      margin-top: 60px; }
+      main .plans .plans__plan .plans__wrap {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        max-width: 96px;
+        width: 24%;
+        min-width: 60px;
+        height: width;
+        padding: 6.5%;
+        top: -1vw;
+        left: 1vw; }
+        main .plans .plans__plan .plans__wrap img {
+          width: 100%; }
+      main .plans .plans__plan p {
+        font-size: 2vw;
+        text-align: right;
+        margin-bottom: 15px; }
+        main .plans .plans__plan p:first-line {
+          font-size: 16px;
+          color: #aaa; }
+      main .plans .plans__plan hr {
+        margin-bottom: 15px; }
+      main .plans .plans__plan a {
+        text-decoration: none;
+        vertical-align: baseline; }
+        main .plans .plans__plan a:hover {
+          text-decoration: none;
+          cursor: pointer; }
+        main .plans .plans__plan a img {
+          height: 16px;
+          margin-right: 1px; }
+        main .plans .plans__plan a span {
+          color: #bbb;
+          font-size: 0.9em;
+          vertical-align: top; }
+      main .plans .plans__plan:first-child .plans__wrap {
+        background-color: #448B00; }
+      main .plans .plans__plan:nth-child(2) .plans__wrap {
+        background-color: #D89E24; }
+      main .plans .plans__plan:nth-child(3) .plans__wrap {
+        background-color: #274D97; }
+      main .plans .plans__plan:last-child .plans__wrap {
+        background-color: #C32056; }
