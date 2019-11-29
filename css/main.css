@@ -1,9 +1,9 @@
-menu hr {
+aside hr {
   margin: 0;
   border: none;
   border-bottom: 2px solid #D2D2D2; }
 
-menu header h1 {
+aside header h1 {
   font-size: 24px;
   padding: 30px;
   margin: 0;
@@ -13,7 +13,7 @@ menu header h1 {
   margin: 0;
   padding: 0; }
 
-menu {
+aside {
   width: 250px;
   height: 100vh;
   position: fixed;
@@ -21,19 +21,51 @@ menu {
   left: 0;
   background-color: #F6F6F6;
   border-right: 3px solid #D2D2D2; }
-  menu header {
+  @media (min-width: 499.9px) and (max-width: 799.9px) {
+    aside {
+      width: 200px;
+      height: auto;
+      position: static;
+      display: inline-block;
+      background: none;
+      border: none; } }
+  aside header {
     margin: 0; }
-  menu .menu {
+    @media (min-width: 499.9px) and (max-width: 799.9px) {
+      aside header {
+        display: none; } }
+    @media (min-width: 499.9px) and (max-width: 799.9px) {
+      aside header h1 {
+        display: none; } }
+  @media (min-width: 499.9px) and (max-width: 799.9px) {
+    aside hr {
+      display: none; } }
+  aside menu {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     padding: 30px 15px; }
-    menu .menu ul {
+    aside menu div[name="menu"] {
+      display: none;
+      background-image: url(../img/bars-solid.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      width: 24px;
+      height: 24px; }
+      @media (min-width: 499.9px) and (max-width: 799.9px) {
+        aside menu div[name="menu"] {
+          display: block; } }
+    aside menu:hover ul {
+      display: block; }
+    aside menu ul {
       list-style-type: none;
       width: 100%; }
-      menu .menu ul li {
+      @media (min-width: 499.9px) and (max-width: 799.9px) {
+        aside menu ul {
+          display: none; } }
+      aside menu ul li {
         width: 100%; }
-        menu .menu ul li a {
+        aside menu ul li a {
           width: 100%;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -43,29 +75,30 @@ menu {
           background-repeat: no-repeat;
           background-size: 20px;
           background-position: 15px 50%;
-          color: #858585; }
-          menu .menu ul li a[name="dashboard"] {
+          color: #858585;
+          text-decoration: none; }
+          aside menu ul li a[name="dashboard"] {
             background-image: url(../img/dashboard_gray.svg); }
-          menu .menu ul li a[name="user_profile"] {
+          aside menu ul li a[name="user_profile"] {
             background-image: url(../img/account_gray.svg); }
-          menu .menu ul li a[name="maps"] {
+          aside menu ul li a[name="maps"] {
             background-image: url(../img/map_gray.svg); }
-          menu .menu ul li a[name="notifycation"] {
+          aside menu ul li a[name="notifycation"] {
             background-image: url(../img/notify_gray.svg); }
-          menu .menu ul li a[name="support"] {
+          aside menu ul li a[name="support"] {
             background-image: url(../img/support_gray.svg); }
-          menu .menu ul li a.active, menu .menu ul li a:hover {
+          aside menu ul li a.active, aside menu ul li a:hover {
             background-color: #C32056;
             color: #fff;
             -webkit-box-shadow: 0 2px 3px 2px #bbb;
             box-shadow: 0 2px 3px 2px #bbb; }
-          menu .menu ul li a[name="dashboard"].active, menu .menu ul li a[name="dashboard"]:hover {
+          aside menu ul li a[name="dashboard"].active, aside menu ul li a[name="dashboard"]:hover {
             background-image: url(../img/dashboard_white.svg); }
-          menu .menu ul li a[name="user_profile"].active, menu .menu ul li a[name="user_profile"]:hover {
+          aside menu ul li a[name="user_profile"].active, aside menu ul li a[name="user_profile"]:hover {
             background-image: url(../img/account_white.svg); }
-          menu .menu ul li a[name="maps"].active, menu .menu ul li a[name="maps"]:hover {
+          aside menu ul li a[name="maps"].active, aside menu ul li a[name="maps"]:hover {
             background-image: url(../img/map_white.png); }
-          menu .menu ul li a[name="notifycation"].active, menu .menu ul li a[name="notifycation"]:hover {
+          aside menu ul li a[name="notifycation"].active, aside menu ul li a[name="notifycation"]:hover {
             background-image: url(../img/notify_white.png); }
-          menu .menu ul li a[name="support"].active, menu .menu ul li a[name="support"]:hover {
+          aside menu ul li a[name="support"].active, aside menu ul li a[name="support"]:hover {
             background-image: url(../img/support_white.png); }

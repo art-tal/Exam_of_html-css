@@ -19,7 +19,7 @@ $border: #D2D2D2
 	margin: 0
 	padding: 0
 
-menu
+aside
 	width: 250px
 	height: 100vh
 	position: fixed
@@ -27,19 +27,46 @@ menu
 	left: 0
 	background-color: #F6F6F6
 	border-right: 3px solid #D2D2D2
+	@media (min-width: 499.9px) and (max-width: 799.9px)
+		width: 200px
+		height: auto
+		position: static
+		display: inline-block
+		background: none
+		border: none
 	header
 		margin: 0
+		@media (min-width: 499.9px) and (max-width: 799.9px)
+			display: none
 		h1
 			@extend %h1
+			@media (min-width: 499.9px) and (max-width: 799.9px)
+				display: none
 	hr
 		@extend %hr
-	.menu
+		@media (min-width: 499.9px) and (max-width: 799.9px)
+			display: none	
+	menu
 		box-sizing: border-box
 		width: 100%
 		padding: 30px 15px
+		div[name="menu"]
+			display: none
+			background-image:url(../img/bars-solid.svg)
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			width: 24px
+			height: 24px
+		
+			@media (min-width: 499.9px) and (max-width: 799.9px)
+				display: block
+		&:hover ul
+			display: block		
 		ul
 			list-style-type: none
 			width: 100%
+			@media (min-width: 499.9px) and (max-width: 799.9px)
+				display: none				
 			li
 				width: 100%
 				a
@@ -52,6 +79,7 @@ menu
 					background-size: 20px
 					background-position: 15px 50%
 					color: #858585
+					text-decoration: none
 					&[name="dashboard"]
 						background-image: url(../img/dashboard_gray.svg)
 					&[name="user_profile"]
