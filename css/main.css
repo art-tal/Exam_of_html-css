@@ -1,4 +1,4 @@
-aside hr, main .plans .plans__plan hr {
+aside hr, main .plans .plans__plan hr, main .grafics .grafics__item hr {
   margin: 0;
   border: none;
   border-bottom: 2px solid #D2D2D2; }
@@ -9,17 +9,19 @@ aside header h1, main h1 {
   margin: 0;
   color: #333; }
 
-main .plans .plans__plan {
+main .plans .plans__plan, main .grafics .grafics__item {
   border: 1px solid #D2D2D2;
   -webkit-box-shadow: 3px 3px 3px #bbb;
-  box-shadow: 3px 3px 3px #bbb; }
+  box-shadow: 3px 3px 3px #bbb;
+  background-color: #F6F6F6; }
 
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  min-width: 300px; }
+  min-width: 300px;
+  font-family: Arial, sans-serif; }
 
 aside {
   width: 250px;
@@ -148,7 +150,6 @@ main {
       main .plans {
         display: block; } }
     main .plans .plans__plan {
-      background-color: #F6F6F6;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       -ms-flex-preferred-size: 24%;
@@ -208,10 +209,15 @@ main {
             padding: 5%;
             top: -2.5vw;
             left: 2.5vw; } }
+        @media (max-width: 299.9px) {
+          main .plans .plans__plan .plans__wrap {
+            width: 25%;
+            top: -10px;
+            left: 10px; } }
         main .plans .plans__plan .plans__wrap img {
           width: 100%; }
       main .plans .plans__plan p {
-        font-size: 2vw;
+        font-size: 1.9vw;
         text-align: right;
         margin-bottom: 15px; }
         @media (min-width: 800px) and (max-width: 999.9px) {
@@ -226,14 +232,16 @@ main {
         @media (max-width: 499.9px) {
           main .plans .plans__plan p {
             font-size: 7vw; } }
+        @media (max-width: 299.9px) {
+          main .plans .plans__plan p {
+            font-size: 22px; } }
         main .plans .plans__plan p:first-line {
-          font-size: 16px;
+          font-size: 15px;
           color: #aaa; }
       main .plans .plans__plan hr {
         margin-bottom: 15px; }
       main .plans .plans__plan a {
-        text-decoration: none;
-        vertical-align: baseline; }
+        text-decoration: none; }
         main .plans .plans__plan a:hover {
           text-decoration: none;
           cursor: pointer; }
@@ -242,7 +250,7 @@ main {
           margin-right: 1px; }
         main .plans .plans__plan a span {
           color: #bbb;
-          font-size: 0.9em;
+          font-size: 0.8em;
           vertical-align: top; }
       main .plans .plans__plan:first-child .plans__wrap {
         background-color: #448B00; }
@@ -252,3 +260,161 @@ main {
         background-color: #274D97; }
       main .plans .plans__plan:last-child .plans__wrap {
         background-color: #C32056; }
+
+main .grafics {
+  margin-top: 80px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  @media (min-width: 800px) and (max-width: 999.9px) {
+    main .grafics {
+      margin-top: 20px; } }
+  @media (min-width: 650px) and (max-width: 799.9px) {
+    main .grafics {
+      margin-top: 10px; } }
+  @media (min-width: 500px) and (max-width: 649.9px) {
+    main .grafics {
+      margin-top: 10px;
+      display: block; } }
+  @media (max-width: 499.9px) {
+    main .grafics {
+      margin-top: 10px;
+      display: block; } }
+  main .grafics .grafics__item {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
+    padding: 20px;
+    color: #777;
+    position: relative; }
+    @media (min-width: 500px) and (max-width: 649.9px) {
+      main .grafics .grafics__item {
+        margin-bottom: 60px;
+        width: 100%; } }
+    @media (max-width: 499.9px) {
+      main .grafics .grafics__item {
+        margin-bottom: 60px;
+        width: 100%; } }
+    main .grafics .grafics__item:first-child .grafic_img {
+      background-color: #448B00; }
+    main .grafics .grafics__item:nth-child(2) .grafic_img {
+      background-color: #D89E24; }
+    main .grafics .grafics__item:last-child .grafic_img {
+      background-color: #274D97; }
+    main .grafics .grafics__item .grafic_img {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 20px;
+      position: relative;
+      left: 0px;
+      top: -40px; }
+      main .grafics .grafics__item .grafic_img img {
+        width: 100%; }
+    main .grafics .grafics__item h3 {
+      margin-top: -20px;
+      font-size: 1.5vw;
+      font-weight: 400; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .grafics .grafics__item h3 {
+          font-size: 2vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .grafics .grafics__item h3 {
+          font-size: 2.5vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .grafics .grafics__item h3 {
+          font-size: 4vw; } }
+      @media (max-width: 499.9px) {
+        main .grafics .grafics__item h3 {
+          font-size: 5vw; } }
+      @media (max-width: 299.9px) {
+        main .grafics .grafics__item h3 {
+          font-size: 16px; } }
+    main .grafics .grafics__item p {
+      margin-top: 5px;
+      font-size: 1vw;
+      margin-bottom: 1vw; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .grafics .grafics__item p {
+          font-size: 1.5vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .grafics .grafics__item p {
+          font-size: 2vw;
+          margin-bottom: 1.5vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .grafics .grafics__item p {
+          font-size: 3vw;
+          margin-bottom: 2vw; } }
+      @media (max-width: 499.9px) {
+        main .grafics .grafics__item p {
+          font-size: 4vw;
+          margin-bottom: 3vw; } }
+      @media (max-width: 299.9px) {
+        main .grafics .grafics__item p {
+          font-size: 12px;
+          margin-bottom: 10px; } }
+    main .grafics .grafics__item div.time_info {
+      margin-top: 1vw; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .grafics .grafics__item div.time_info {
+          margin-top: 1vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .grafics .grafics__item div.time_info {
+          margin-top: 1.5vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .grafics .grafics__item div.time_info {
+          margin-top: 2vw; } }
+      @media (max-width: 499.9px) {
+        main .grafics .grafics__item div.time_info {
+          margin-top: 3vw; } }
+      @media (max-width: 299.9px) {
+        main .grafics .grafics__item div.time_info {
+          margin-top: 10px; } }
+      main .grafics .grafics__item div.time_info img {
+        margin-right: 5px;
+        width: 1.1vw;
+        vertical-align: middle; }
+        @media (min-width: 800px) and (max-width: 999.9px) {
+          main .grafics .grafics__item div.time_info img {
+            width: 1.3vw;
+            margin-right: 2px; } }
+        @media (min-width: 650px) and (max-width: 799.9px) {
+          main .grafics .grafics__item div.time_info img {
+            width: 1.5vw;
+            margin-right: 2px; } }
+        @media (min-width: 500px) and (max-width: 649.9px) {
+          main .grafics .grafics__item div.time_info img {
+            width: 2.5vw;
+            margin-right: 2px; } }
+        @media (max-width: 499.9px) {
+          main .grafics .grafics__item div.time_info img {
+            width: 3.2vw;
+            margin-right: 2px; } }
+        @media (max-width: 299.9px) {
+          main .grafics .grafics__item div.time_info img {
+            width: 16px; } }
+      main .grafics .grafics__item div.time_info span {
+        font-size: 1vw; }
+        @media (min-width: 800px) and (max-width: 999.9px) {
+          main .grafics .grafics__item div.time_info span {
+            font-size: 1.6vw; } }
+        @media (min-width: 650px) and (max-width: 799.9px) {
+          main .grafics .grafics__item div.time_info span {
+            font-size: 1.5vw; } }
+        @media (min-width: 500px) and (max-width: 649.9px) {
+          main .grafics .grafics__item div.time_info span {
+            font-size: 2.4vw; } }
+        @media (max-width: 499.9px) {
+          main .grafics .grafics__item div.time_info span {
+            font-size: 3vw; } }
+        @media (max-width: 299.9px) {
+          main .grafics .grafics__item div.time_info span {
+            font-size: 14px; } }

@@ -1,4 +1,8 @@
 $border: #D2D2D2
+$green: #448B00
+$yellow: #D89E24
+$blue: #274D97
+$burgundy: #C32056
 
 %hr
 	margin: 0
@@ -13,6 +17,7 @@ $border: #D2D2D2
 %blocks_border_shadow
 	border: 1px solid $border
 	box-shadow: 3px 3px 3px #bbb
+	background-color: #F6F6F6
 
 
 *
@@ -21,7 +26,8 @@ $border: #D2D2D2
 
 body
 	min-width: 300px
-// 
+	font-family: Arial, sans-serif
+///////////ASIDE///////////
 aside
 	width: 250px
 	height: 100vh
@@ -125,7 +131,7 @@ aside
 					&[name="support"]:hover
 						background-image: url(../img/support_white.png)
 
-					
+/////////////MAIN///////////				
 
 main
 	margin-left: 253px
@@ -138,7 +144,7 @@ main
 		margin: 0
 		padding: 0
 		@media (max-width: 799.9px)
-			margin-left: 40px
+			margin-left: 40px		
 	.plans
 		margin-top: 60px
 		display: -webkit-flex
@@ -153,7 +159,7 @@ main
 			display: block
 		.plans__plan
 			@extend %blocks_border_shadow
-			background-color: #F6F6F6
+			// background-color: #F6F6F6
 			box-sizing: border-box
 			flex-basis: 24%
 			position: relative
@@ -202,10 +208,14 @@ main
 					padding: 5%
 					top: -2.5vw
 					left: 2.5vw
+				@media (max-width: 299.9px)
+					width: 25%
+					top: -10px
+					left: 10px
 				img
 					width: 100%
 			p				
-				font-size: 2vw
+				font-size: 1.9vw
 				text-align: right
 				margin-bottom: 15px
 				@media (min-width: 800px) and (max-width: 999.9px)
@@ -216,8 +226,10 @@ main
 					font-size: 5vw
 				@media (max-width: 499.9px)
 					font-size: 7vw
+				@media (max-width: 299.9px)
+					font-size: 22px
 				&:first-line
-					font-size: 16px
+					font-size: 15px
 					color: #aaa
 			hr
 				@extend %hr
@@ -227,22 +239,148 @@ main
 				&:hover
 					text-decoration: none
 					cursor: pointer
-				vertical-align: baseline
+				// vertical-align: baseline
 				img
-					// height: 16px
 					height: 16px
 					margin-right: 1px
 				span
 					color:#bbb
-					// font-size: 1.2vw
-					font-size: 0.9em
+					font-size: 0.8em
 					vertical-align: top
 
 			&:first-child .plans__wrap
-				background-color: #448B00
+				background-color: $green
 			&:nth-child(2) .plans__wrap
-				background-color: #D89E24
+				background-color: $yellow
 			&:nth-child(3) .plans__wrap
-				background-color: #274D97
+				background-color: $blue
 			&:last-child .plans__wrap
-				background-color: #C32056					
+				background-color: $burgundy
+
+//////////.grafics///////////////
+
+main
+	.grafics
+		margin-top: 80px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		@media (min-width: 800px) and (max-width: 999.9px)
+			margin-top: 20px
+		@media (min-width: 650px) and (max-width: 799.9px)
+			margin-top: 10px
+		@media (min-width: 500px) and (max-width: 649.9px)
+			margin-top: 10px
+			display: block
+		@media (max-width: 499.9px)
+			margin-top: 10px
+			display: block
+		.grafics__item
+			box-sizing: border-box
+			flex-basis: 32%
+			@extend %blocks_border_shadow
+			padding: 20px
+			color: #777
+			position: relative
+			@media (min-width: 500px) and (max-width: 649.9px)
+				margin-bottom: 60px
+				width: 100%
+			@media (max-width: 499.9px)
+				margin-bottom: 60px
+				width: 100%
+			&:first-child .grafic_img
+				background-color: $green
+			&:nth-child(2) .grafic_img
+				background-color: $yellow
+			&:last-child .grafic_img
+				background-color: $blue
+			.grafic_img
+				box-sizing: border-box
+				width: 100%
+				padding: 20px
+				position: relative
+				left: 0px
+				top: -40px		
+				img
+					width: 100%
+			h3
+				margin-top: -20px
+				font-size: 1.5vw//24px
+				font-weight: 400
+				@media (min-width: 800px) and (max-width: 999.9px)
+					font-size: 2vw
+				@media (min-width: 650px) and (max-width: 799.9px)
+					font-size: 2.5vw
+				@media (min-width: 500px) and (max-width: 649.9px)
+					font-size: 4vw
+				@media (max-width: 499.9px)
+					font-size: 5vw
+				@media (max-width: 299.9px)
+					font-size: 16px
+			p
+				margin-top: 5px
+				font-size: 1vw//18px
+				margin-bottom: 1vw//20px
+				@media (min-width: 800px) and (max-width: 999.9px)
+					font-size: 1.5vw
+				@media (min-width: 650px) and (max-width: 799.9px)
+					font-size: 2vw
+					margin-bottom: 1.5vw
+				@media (min-width: 500px) and (max-width: 649.9px)
+					font-size: 3vw
+					margin-bottom: 2vw
+				@media (max-width: 499.9px)
+					font-size: 4vw
+					margin-bottom: 3vw
+				@media (max-width: 299.9px)
+					font-size: 12px
+					margin-bottom: 10px
+			hr
+				@extend %hr
+			div.time_info
+				margin-top: 1vw//20px
+				@media (min-width: 800px) and (max-width: 999.9px)
+					margin-top: 1vw
+				@media (min-width: 650px) and (max-width: 799.9px)
+					margin-top: 1.5vw
+				@media (min-width: 500px) and (max-width: 649.9px)
+					margin-top: 2vw
+				@media (max-width: 499.9px)
+					margin-top: 3vw
+				@media (max-width: 299.9px)
+					margin-top: 10px
+				img
+					margin-right: 5px
+					width: 1.1vw//16px
+					vertical-align: middle
+					@media (min-width: 800px) and (max-width: 999.9px)
+						width: 1.3vw
+						margin-right: 2px
+					@media (min-width: 650px) and (max-width: 799.9px)
+						width: 1.5vw
+						margin-right: 2px
+					@media (min-width: 500px) and (max-width: 649.9px)
+						width: 2.5vw
+						margin-right: 2px
+					@media (max-width: 499.9px)
+						width: 3.2vw
+						margin-right: 2px
+					@media (max-width: 299.9px)
+						width: 16px
+				span
+					font-size: 1vw
+					@media (min-width: 800px) and (max-width: 999.9px)
+						font-size: 1.6vw
+					@media (min-width: 650px) and (max-width: 799.9px)
+						font-size: 1.5vw
+					@media (min-width: 500px) and (max-width: 649.9px)
+						font-size: 2.4vw
+					@media (max-width: 499.9px)
+						font-size: 3vw
+					@media (max-width: 299.9px)
+						font-size: 14px
+					
+						
