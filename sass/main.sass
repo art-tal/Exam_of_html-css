@@ -178,6 +178,8 @@ main
 				flex-basis: 100%
 				margin-bottom: 50px
 			.plans__wrap
+				@extend %blocks_border_shadow
+				border: none
 				box-sizing: border-box
 				position: absolute
 				max-width: 96px
@@ -305,6 +307,8 @@ main
 			&:last-child .grafic_img
 				background-color: $blue
 			.grafic_img
+				@extend %blocks_border_shadow
+				border: none
 				box-sizing: border-box
 				width: 100%
 				padding: 20px
@@ -391,7 +395,7 @@ main
 						font-size: 13px
 					
 						
-//////////.grafics///////////////
+//////////.lists///////////////
 
 main
 	.lists
@@ -417,6 +421,8 @@ main
 				width: 100%
 				// margin-bottom: 60px
 			.list_tasks
+				@extend %blocks_border_shadow
+				border: none
 				display: -webkit-flex
 				display: -moz-flex
 				display: -ms-flex
@@ -533,7 +539,7 @@ main
 						background-color: #DEAD49
 			form
 				margin-top: -20px
-				fieldset
+				.fieldset
 					box-sizing: border-box
 					padding: 15px
 					@extend %hr
@@ -544,6 +550,13 @@ main
 					display: flex
 					justify-content: space-between
 					align-items: center
+					//работает в firefox далее будет эксперимент
+
+					// display: grid
+					// grid-template-columns: 5% 75% 8% 8%
+						// grid-gap: 1px
+
+
 					&:last-child
 						border: none
 					input
@@ -586,6 +599,8 @@ main
 							background-color: #CE3E3E
 							background-image: url(../img/remove.png)
 		.employees
+			@extend %blocks_border_shadow
+			border: none
 			box-sizing: border-box
 			width: 100%
 			padding: 20px
@@ -710,26 +725,33 @@ main.user_profile
 		display: flex
 		justify-content: space-between
 		flex-direction: row-reverse
+		align-items: start
+		@media (max-width: 999.9px)
+			display: block
+						
 		.user
-			width: 35%
-			margin-top: 130px
+			// width: 35%
+			flex: 2
+			margin-top: 60px
 			padding: 20px
 			box-sizing: border-box
 			@extend %blocks_border_shadow
 			text-align: center
 			position: relative
 			.photo
-				width: 40%
-				// height: width
+				box-shadow: 0px 0px 5px 3px #bbb
+				width: 150px
+				height: 150px			
 				overflow: hidden
 				border-radius: 50%
 				position: absolute
-				top: -90px
-				left: 30%
+				top: -60px
+				left: calc(50% - 75px)
 				img
 					width: 100%
+					height: 100%
 			h5
-				margin-top: 130px
+				margin-top: 90px
 				color: #999
 				text-transform: uppercase
 				margin-bottom: 15px
@@ -743,12 +765,16 @@ main.user_profile
 				line-height: 1.5
 
 		article.edit
-			width: 64%
-			margin-top: 40px
+			// width: 64%
+			flex: 5
+			margin-top: 60px
 			box-sizing: border-box
 			padding: 20px
+			margin-right: 20px
 			@extend %blocks_border_shadow
 			header
+				@extend %blocks_border_shadow
+				border: none
 				padding: 20px
 				width: 100%
 				box-sizing: border-box
@@ -764,7 +790,8 @@ main.user_profile
 					font-size: 16px	
 			form
 				margin-top: -20px
-				fieldset
+				padding-bottom: 40px
+				.fieldset
 					border: none
 					display: -webkit-flex
 					display: -moz-flex
@@ -772,10 +799,14 @@ main.user_profile
 					display: -o-flex
 					display: flex
 					justify-content: space-between
+					@media (max-width: 649.9px)
+						display: block
+						
 					.field
 						flex: 1
-						margin-right: 15px
+						margin-right: 20px
 						margin-bottom: 15px
+						box-sizing: border-box
 						&:last-child
 							margin-right: 0
 						label
@@ -784,10 +815,23 @@ main.user_profile
 							font-size: 14px
 						input, textarea
 							width: 100%
+							box-sizing: border-box
 							border: none
 							border-bottom: 1px solid $border
 							background: none
-							padding: 10px 0
+							padding: 10px 5px
 						textarea
 							height: 70px
-							bsz-bb
+							box-sizing: border-box
+							width: 100%
+							resize: vertical
+				button
+					background-color: $burgundy
+					border: none
+					color: #fff
+					text-transform: uppercase
+					font-size: 18px
+					padding: 10px 50px
+					// width: 33.3%
+					float: right
+					cursor: pointer

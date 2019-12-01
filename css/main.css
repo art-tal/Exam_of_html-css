@@ -1,4 +1,4 @@
-aside hr, main .plans .plans__plan hr, main .grafics .grafics__item hr, main .lists .lists__list form fieldset {
+aside hr, main .plans .plans__plan hr, main .grafics .grafics__item hr, main .lists .lists__list form .fieldset {
   margin: 0;
   border: none;
   border-bottom: 2px solid #D2D2D2; }
@@ -9,7 +9,7 @@ aside header h1, main h1 {
   margin: 0;
   color: #333; }
 
-main .plans .plans__plan, main .grafics .grafics__item, main .lists .lists__list, main.user_profile .wrap .user, main.user_profile .wrap article.edit {
+main .plans .plans__plan, main .plans .plans__plan .plans__wrap, main .grafics .grafics__item, main .grafics .grafics__item .grafic_img, main .lists .lists__list, main .lists .lists__list .list_tasks, main .lists .employees, main.user_profile .wrap .user, main.user_profile .wrap article.edit, main.user_profile .wrap article.edit header {
   border: 1px solid #D2D2D2;
   -webkit-box-shadow: 3px 3px 3px #bbb;
   box-shadow: 3px 3px 3px #bbb;
@@ -173,6 +173,7 @@ main {
           flex-basis: 100%;
           margin-bottom: 50px; } }
       main .plans .plans__plan .plans__wrap {
+        border: none;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: absolute;
@@ -316,6 +317,7 @@ main .grafics {
     main .grafics .grafics__item:last-child .grafic_img {
       background-color: #274D97; }
     main .grafics .grafics__item .grafic_img {
+      border: none;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       width: 100%;
@@ -449,6 +451,7 @@ main .lists {
       main .lists .lists__list {
         width: 100%; } }
     main .lists .lists__list .list_tasks {
+      border: none;
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flex;
@@ -586,7 +589,7 @@ main .lists {
           background-color: #DEAD49; }
     main .lists .lists__list form {
       margin-top: -20px; }
-      main .lists .lists__list form fieldset {
+      main .lists .lists__list form .fieldset {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 15px;
@@ -603,31 +606,31 @@ main .lists {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; }
-        main .lists .lists__list form fieldset:last-child {
+        main .lists .lists__list form .fieldset:last-child {
           border: none; }
-        main .lists .lists__list form fieldset input {
+        main .lists .lists__list form .fieldset input {
           text-align: left;
           width: 5%;
           margin-right: 1%; }
-        main .lists .lists__list form fieldset label {
+        main .lists .lists__list form .fieldset label {
           width: 74%;
           font-size: 0.9vw; }
           @media (min-width: 800px) and (max-width: 999.9px) {
-            main .lists .lists__list form fieldset label {
+            main .lists .lists__list form .fieldset label {
               font-size: 1.6vw; } }
           @media (min-width: 650px) and (max-width: 799.9px) {
-            main .lists .lists__list form fieldset label {
+            main .lists .lists__list form .fieldset label {
               font-size: 2vw; } }
           @media (min-width: 500px) and (max-width: 649.9px) {
-            main .lists .lists__list form fieldset label {
+            main .lists .lists__list form .fieldset label {
               font-size: 2.75vw; } }
           @media (max-width: 499.9px) {
-            main .lists .lists__list form fieldset label {
+            main .lists .lists__list form .fieldset label {
               font-size: 3.4vw; } }
           @media (max-width: 399.9px) {
-            main .lists .lists__list form fieldset label {
+            main .lists .lists__list form .fieldset label {
               font-size: 13px; } }
-        main .lists .lists__list form fieldset button {
+        main .lists .lists__list form .fieldset button {
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: 20px;
@@ -635,13 +638,14 @@ main .lists {
           height: 24px;
           border-radius: 50%;
           border: none; }
-          main .lists .lists__list form fieldset button.edit {
+          main .lists .lists__list form .fieldset button.edit {
             background-color: #38B498;
             background-image: url(../img/edit.png); }
-          main .lists .lists__list form fieldset button.cansel {
+          main .lists .lists__list form .fieldset button.cansel {
             background-color: #CE3E3E;
             background-image: url(../img/remove.png); }
   main .lists .employees {
+    border: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
@@ -787,26 +791,38 @@ main.user_profile .wrap {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start; }
+  @media (max-width: 999.9px) {
+    main.user_profile .wrap {
+      display: block; } }
   main.user_profile .wrap .user {
-    width: 35%;
-    margin-top: 130px;
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    margin-top: 60px;
     padding: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
     position: relative; }
     main.user_profile .wrap .user .photo {
-      width: 40%;
+      -webkit-box-shadow: 0px 0px 5px 3px #bbb;
+      box-shadow: 0px 0px 5px 3px #bbb;
+      width: 150px;
+      height: 150px;
       overflow: hidden;
       border-radius: 50%;
       position: absolute;
-      top: -90px;
-      left: 30%; }
+      top: -60px;
+      left: calc(50% - 75px); }
       main.user_profile .wrap .user .photo img {
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
     main.user_profile .wrap .user h5 {
-      margin-top: 130px;
+      margin-top: 90px;
       color: #999;
       text-transform: uppercase;
       margin-bottom: 15px; }
@@ -818,12 +834,16 @@ main.user_profile .wrap {
       color: #777;
       line-height: 1.5; }
   main.user_profile .wrap article.edit {
-    width: 64%;
-    margin-top: 40px;
+    -webkit-box-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
+    margin-top: 60px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 20px; }
+    padding: 20px;
+    margin-right: 20px; }
     main.user_profile .wrap article.edit header {
+      border: none;
       padding: 20px;
       width: 100%;
       -webkit-box-sizing: border-box;
@@ -839,8 +859,9 @@ main.user_profile .wrap {
       main.user_profile .wrap article.edit header p {
         font-size: 16px; }
     main.user_profile .wrap article.edit form {
-      margin-top: -20px; }
-      main.user_profile .wrap article.edit form fieldset {
+      margin-top: -20px;
+      padding-bottom: 40px; }
+      main.user_profile .wrap article.edit form .fieldset {
         border: none;
         display: -webkit-flex;
         display: -moz-flex;
@@ -852,23 +873,43 @@ main.user_profile .wrap {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between; }
-        main.user_profile .wrap article.edit form fieldset .field {
+        @media (max-width: 649.9px) {
+          main.user_profile .wrap article.edit form .fieldset {
+            display: block; } }
+        main.user_profile .wrap article.edit form .fieldset .field {
           -webkit-box-flex: 1;
           -ms-flex: 1;
           flex: 1;
-          margin-right: 15px;
-          margin-bottom: 15px; }
-          main.user_profile .wrap article.edit form fieldset .field:last-child {
+          margin-right: 20px;
+          margin-bottom: 15px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+          main.user_profile .wrap article.edit form .fieldset .field:last-child {
             margin-right: 0; }
-          main.user_profile .wrap article.edit form fieldset .field label {
+          main.user_profile .wrap article.edit form .fieldset .field label {
             display: block;
             color: #777;
             font-size: 14px; }
-          main.user_profile .wrap article.edit form fieldset .field input, main.user_profile .wrap article.edit form fieldset .field textarea {
+          main.user_profile .wrap article.edit form .fieldset .field input, main.user_profile .wrap article.edit form .fieldset .field textarea {
             width: 100%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             border: none;
             border-bottom: 1px solid #D2D2D2;
             background: none;
-            padding: 10px 0; }
-          main.user_profile .wrap article.edit form fieldset .field textarea {
-            height: 70px; }
+            padding: 10px 5px; }
+          main.user_profile .wrap article.edit form .fieldset .field textarea {
+            height: 70px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            resize: vertical; }
+      main.user_profile .wrap article.edit form button {
+        background-color: #C32056;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 10px 50px;
+        float: right;
+        cursor: pointer; }
