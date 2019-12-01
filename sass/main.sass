@@ -37,8 +37,7 @@ aside
 	top: 0
 	left: 0
 	background-color: #F6F6F6
-	border-right: 3px solid #D2D2D2
-	// @media (min-width: 299.9px) and (max-width: 799.9px)
+	border-right: 3px solid #D2D2D2	
 	@media (max-width: 799.9px)
 		width: 200px
 		height: auto
@@ -50,18 +49,15 @@ aside
 		background: none
 		border: none
 	header
-		margin: 0
-		// @media (min-width: 299.9px) and (max-width: 799.9px)
+		margin: 0		
 		@media (min-width: 299.9px) and (max-width: 799.9px)
 			display: none
 		h1
 			@extend %h1
-			// @media (min-width: 299.9px) and (max-width: 799.9px)
 			@media (max-width: 799.9px)
 				display: none
 	hr
 		@extend %hr
-		// @media (min-width: 299.9px) and (max-width: 799.9px)
 		@media (max-width: 799.9px)
 			display: none	
 	menu
@@ -78,8 +74,6 @@ aside
 			background-position: 50% 50%
 			width: 24px
 			height: 24px
-			
-			// @media (min-width: 299.9px) and (max-width: 799.9px)
 			@media(max-width: 799.9px)
 				display: block
 		&:hover ul
@@ -88,8 +82,6 @@ aside
 		ul
 			list-style-type: none
 			width: 100%
-
-			// @media (min-width: 299.9px) and (max-width: 799.9px)
 			@media (max-width: 799.9px)
 				display: none				
 			li
@@ -141,7 +133,6 @@ aside
 main
 	margin-left: 253px
 	padding: 30px
-	// background-color: #E9E9E9
 	@media (max-width: 799.9px)
 		margin-left: 0
 	h1
@@ -166,7 +157,6 @@ main
 			display: block
 		.plans__plan
 			@extend %blocks_border_shadow
-			// background-color: #F6F6F6
 			box-sizing: border-box
 			flex-basis: 24%
 			position: relative
@@ -248,7 +238,6 @@ main
 				&:hover
 					text-decoration: none
 					cursor: pointer
-				// vertical-align: baseline
 				img
 					height: 16px
 					margin-right: 1px
@@ -319,7 +308,7 @@ main
 					width: 100%
 			h3
 				margin-top: -20px
-				font-size: 1.5vw//24px
+				font-size: 1.5vw
 				font-weight: 400
 				@media (min-width: 800px) and (max-width: 999.9px)
 					font-size: 2vw
@@ -333,8 +322,8 @@ main
 					font-size: 20px
 			p
 				margin-top: 5px
-				font-size: 1vw//18px
-				margin-bottom: 1vw//20px
+				font-size: 1vw
+				margin-bottom: 1vw
 				@media (min-width: 800px) and (max-width: 999.9px)
 					font-size: 1.5vw
 				@media (min-width: 650px) and (max-width: 799.9px)
@@ -352,7 +341,7 @@ main
 			hr
 				@extend %hr
 			div.time_info
-				margin-top: 1vw//20px
+				margin-top: 1vw
 				@media (min-width: 800px) and (max-width: 999.9px)
 					margin-top: 1vw
 				@media (min-width: 650px) and (max-width: 799.9px)
@@ -365,7 +354,7 @@ main
 					margin-top: 12px
 				img
 					margin-right: 5px
-					width: 1.1vw//16px
+					width: 1.1vw
 					vertical-align: middle
 					@media (min-width: 800px) and (max-width: 999.9px)
 						width: 1.3vw
@@ -399,7 +388,6 @@ main
 
 main
 	.lists
-		// margin-top: 60px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -409,9 +397,6 @@ main
 		@media (max-width: 999.9px)
 			display: block
 		.lists__list
-			// flex-basis: 49%
-			// flex-grow: 1
-			// flex-shrink: 1
 			margin-top: 60px
 			width: 49%
 			padding: 20px
@@ -419,7 +404,6 @@ main
 			@extend %blocks_border_shadow
 			@media (max-width: 999.9px)
 				width: 100%
-				// margin-bottom: 60px
 			.list_tasks
 				@extend %blocks_border_shadow
 				border: none
@@ -429,9 +413,9 @@ main
 				display: -o-flex
 				display: flex
 				align-items: center
-				padding: 1vw//20px
+				padding: 1vw
 				background-color: $yellow
-				font-size: 1vw//16px
+				font-size: 1vw
 				color: #fff
 				width: 100%
 				box-sizing: border-box
@@ -455,15 +439,13 @@ main
 				h4
 					margin-right: 15px
 					font-weight: normal
-					// flex: 1 1 1
 
 				div
-					// flex: 1 1 1
-					padding: 0.7vw 1.5vw//15px
-					padding-left: 2.5vw//50px
+					padding: 0.7vw 1.5vw
+					padding-left: 2.5vw
 					background-repeat: no-repeat
-					background-size: 1vw//16px
-					background-position: 0.75vw 50% //20px 50%
+					background-size: 1vw
+					background-position: 0.75vw 50%
 					@media (min-width: 800px) and (max-width: 999.9px)
 						padding: 1vw 2vw
 						padding-left: 4.5vw
@@ -537,6 +519,7 @@ main
 					&:hover,
 					&.active
 						background-color: #DEAD49
+						cursor: pointer
 			form
 				margin-top: -20px
 				.fieldset
@@ -549,23 +532,14 @@ main
 					display: -o-flex
 					display: flex
 					justify-content: space-between
-					align-items: center
-					//работает в firefox далее будет эксперимент
-
-					// display: grid
-					// grid-template-columns: 5% 75% 8% 8%
-						// grid-gap: 1px
-
-
+					align-items: center					
 					&:last-child
 						border: none
 					input
-						// flex-basis: 10px
 						text-align: left
 						width: 5%
-						margin-right: 1%//15px
+						margin-right: 1%
 					label
-						// flex: 8
 						width: 74%
 						font-size: 0.9vw
 						@media (min-width: 800px) and (max-width: 999.9px)
@@ -578,10 +552,7 @@ main
 							font-size: 3.4vw
 						@media (max-width: 399.9px)
 							font-size: 13px
-					button
-						// flex-basis: 35px
-						// width: 10%
-						// float: right
+					button						
 						background-repeat: no-repeat
 						background-position: 50% 50%
 						background-size: 20px
@@ -589,8 +560,7 @@ main
 						height: 24px
 						border-radius: 50%
 						border: none
-						// margin-left: 5px
-						// @media (max-width: 399.9px)
+						cursor: pointer
 
 						&.edit
 							background-color: #38B498
@@ -609,9 +579,9 @@ main
 			position: relative
 			top: -40px
 			h3
-				font-size: 1.4vw//20px
+				font-size: 1.4vw
 				font-weight: normal
-				margin-bottom: 1vw//15px
+				margin-bottom: 1vw
 				@media (min-width: 800px) and (max-width: 999.9px)
 					font-size: 2vw
 					margin-bottom: 1.5vw
@@ -628,7 +598,7 @@ main
 					font-size: 16px
 					margin-bottom: 8px
 			p
-				font-size: 1vw//16px
+				font-size: 1vw
 				@media (min-width: 800px) and (max-width: 999.9px)
 					font-size: 1.8vw
 				@media (min-width: 650px) and (max-width: 799.9px)
@@ -671,7 +641,7 @@ main
 				td
 					border-top: 1px solid $border
 					padding: 10px
-					font-size: 0.9vw//16px
+					font-size: 0.9vw
 					@media (min-width: 800px) and (max-width: 999.9px)
 						font-size: 1.6vw
 					@media (min-width: 650px) and (max-width: 799.9px)
@@ -730,7 +700,6 @@ main.user_profile
 			display: block
 						
 		.user
-			// width: 35%
 			flex: 2
 			margin-top: 60px
 			padding: 20px
@@ -755,7 +724,6 @@ main.user_profile
 				color: #999
 				text-transform: uppercase
 				margin-bottom: 15px
-				// font-size: 18px
 			h3
 				color: #555
 				font-size: 20px
@@ -765,7 +733,6 @@ main.user_profile
 				line-height: 1.5
 
 		article.edit
-			// width: 64%
 			flex: 5
 			margin-top: 60px
 			box-sizing: border-box
@@ -832,6 +799,5 @@ main.user_profile
 					text-transform: uppercase
 					font-size: 18px
 					padding: 10px 50px
-					// width: 33.3%
 					float: right
 					cursor: pointer

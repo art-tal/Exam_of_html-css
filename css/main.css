@@ -586,7 +586,8 @@ main .lists {
               background-size: 16px;
               padding-left: 34px; } }
         main .lists .lists__list .list_tasks div:hover, main .lists .lists__list .list_tasks div.active {
-          background-color: #DEAD49; }
+          background-color: #DEAD49;
+          cursor: pointer; }
     main .lists .lists__list form {
       margin-top: -20px; }
       main .lists .lists__list form .fieldset {
@@ -637,7 +638,8 @@ main .lists {
           min-width: 24px;
           height: 24px;
           border-radius: 50%;
-          border: none; }
+          border: none;
+          cursor: pointer; }
           main .lists .lists__list form .fieldset button.edit {
             background-color: #38B498;
             background-image: url(../img/edit.png); }
