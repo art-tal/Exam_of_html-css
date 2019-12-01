@@ -701,4 +701,45 @@ footer
 
 ///////////Page User Profile////////////////
 
+main.user_profile
+	.wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-direction: row-reverse
+		.user
+			width: 35%
+			margin-top: 130px
+			padding: 20px
+			box-sizing: border-box
+			@extend %blocks_border_shadow
+			text-align: center
+			position: relative
+			.photo
+				width: 40%
+				// height: width
+				overflow: hidden
+				border-radius: 50%
+				position: absolute
+				top: -90px
+				left: 30%
+				img
+					width: 100%
+			h5
+				margin-top: 130px
+				color: #999
+				text-transform: uppercase
+				margin-bottom: 15px
+				// font-size: 18px
+			h3
+				color: #555
+				font-size: 20px
+				margin-bottom: 15px
+			p
+				color: #777
+				line-height: 1.5
 
+	
