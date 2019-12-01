@@ -20,8 +20,9 @@ main .plans .plans__plan, main .grafics .grafics__item, main .lists .lists__list
   padding: 0; }
 
 body {
-  min-width: 300px;
-  font-family: Arial, sans-serif; }
+  min-width: 400px;
+  font-family: Arial, sans-serif;
+  background-color: #E9E9E9; }
 
 aside {
   width: 250px;
@@ -58,6 +59,10 @@ aside {
     box-sizing: border-box;
     width: 100%;
     padding: 30px 15px; }
+    @media (max-width: 799.9px) {
+      aside menu {
+        padding: 0;
+        margin: 30px 15px; } }
     aside menu div[name="menu"] {
       display: none;
       background-image: url(../img/bars-solid.svg);
@@ -119,8 +124,7 @@ aside {
 
 main {
   margin-left: 253px;
-  padding: 30px;
-  background-color: #E9E9E9; }
+  padding: 30px; }
   @media (max-width: 799.9px) {
     main {
       margin-left: 0; } }
@@ -129,7 +133,9 @@ main {
     padding: 0; }
     @media (max-width: 799.9px) {
       main h1 {
-        margin-left: 40px; } }
+        margin-left: 40px;
+        position: relative;
+        z-index: 10; } }
   main .plans {
     margin-top: 60px;
     display: -webkit-flex;
@@ -209,7 +215,7 @@ main {
             padding: 5%;
             top: -2.5vw;
             left: 2.5vw; } }
-        @media (max-width: 299.9px) {
+        @media (max-width: 399.9px) {
           main .plans .plans__plan .plans__wrap {
             width: 25%;
             top: -10px;
@@ -232,9 +238,9 @@ main {
         @media (max-width: 499.9px) {
           main .plans .plans__plan p {
             font-size: 7vw; } }
-        @media (max-width: 299.9px) {
+        @media (max-width: 399.9px) {
           main .plans .plans__plan p {
-            font-size: 22px; } }
+            font-size: 28px; } }
         main .plans .plans__plan p:first-line {
           font-size: 15px;
           color: #aaa; }
@@ -335,9 +341,9 @@ main .grafics {
       @media (max-width: 499.9px) {
         main .grafics .grafics__item h3 {
           font-size: 5vw; } }
-      @media (max-width: 299.9px) {
+      @media (max-width: 399.9px) {
         main .grafics .grafics__item h3 {
-          font-size: 16px; } }
+          font-size: 20px; } }
     main .grafics .grafics__item p {
       margin-top: 5px;
       font-size: 1vw;
@@ -357,10 +363,10 @@ main .grafics {
         main .grafics .grafics__item p {
           font-size: 4vw;
           margin-bottom: 3vw; } }
-      @media (max-width: 299.9px) {
+      @media (max-width: 399.9px) {
         main .grafics .grafics__item p {
-          font-size: 12px;
-          margin-bottom: 10px; } }
+          font-size: 16px;
+          margin-bottom: 12px; } }
     main .grafics .grafics__item div.time_info {
       margin-top: 1vw; }
       @media (min-width: 800px) and (max-width: 999.9px) {
@@ -375,9 +381,9 @@ main .grafics {
       @media (max-width: 499.9px) {
         main .grafics .grafics__item div.time_info {
           margin-top: 3vw; } }
-      @media (max-width: 299.9px) {
+      @media (max-width: 399.9px) {
         main .grafics .grafics__item div.time_info {
-          margin-top: 10px; } }
+          margin-top: 12px; } }
       main .grafics .grafics__item div.time_info img {
         margin-right: 5px;
         width: 1.1vw;
@@ -398,9 +404,9 @@ main .grafics {
           main .grafics .grafics__item div.time_info img {
             width: 3.2vw;
             margin-right: 2px; } }
-        @media (max-width: 299.9px) {
+        @media (max-width: 399.9px) {
           main .grafics .grafics__item div.time_info img {
-            width: 16px; } }
+            width: 13px; } }
       main .grafics .grafics__item div.time_info span {
         font-size: 1vw; }
         @media (min-width: 800px) and (max-width: 999.9px) {
@@ -415,12 +421,11 @@ main .grafics {
         @media (max-width: 499.9px) {
           main .grafics .grafics__item div.time_info span {
             font-size: 3vw; } }
-        @media (max-width: 299.9px) {
+        @media (max-width: 399.9px) {
           main .grafics .grafics__item div.time_info span {
-            font-size: 14px; } }
+            font-size: 13px; } }
 
 main .lists {
-  margin-top: 60px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -431,12 +436,18 @@ main .lists {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media (max-width: 999.9px) {
+    main .lists {
+      display: block; } }
   main .lists .lists__list {
-    -ms-flex-preferred-size: 49%;
-    flex-basis: 49%;
+    margin-top: 60px;
+    width: 49%;
     padding: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+    @media (max-width: 999.9px) {
+      main .lists .lists__list {
+        width: 100%; } }
     main .lists .lists__list .list_tasks {
       display: -webkit-flex;
       display: -moz-flex;
@@ -448,33 +459,129 @@ main .lists {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 20px;
+      padding: 1vw;
       background-color: #D89E24;
-      font-size: 16px;
+      font-size: 1vw;
       color: #fff;
       width: 100%;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       position: relative;
       top: -40px; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .lists .lists__list .list_tasks {
+          padding: 2vw;
+          font-size: 1.75vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .lists .lists__list .list_tasks {
+          padding: 2.5vw;
+          font-size: 2vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .lists .lists__list .list_tasks {
+          padding: 3.5vw;
+          font-size: 3vw; } }
+      @media (max-width: 499.9px) {
+        main .lists .lists__list .list_tasks {
+          padding: 3vw;
+          font-size: 3.5vw; } }
+      @media (max-width: 399.9px) {
+        main .lists .lists__list .list_tasks {
+          padding: 10px;
+          font-size: 12px; } }
       main .lists .lists__list .list_tasks h4 {
         margin-right: 15px;
         font-weight: normal; }
       main .lists .lists__list .list_tasks div {
-        padding: 15px;
-        padding-left: 50px;
+        padding: 0.7vw 1.5vw;
+        padding-left: 2.5vw;
         background-repeat: no-repeat;
-        background-size: 16px;
-        background-position: 20px 50%; }
+        background-size: 1vw;
+        background-position: 0.75vw 50%; }
+        @media (min-width: 800px) and (max-width: 999.9px) {
+          main .lists .lists__list .list_tasks div {
+            padding: 1vw 2vw;
+            padding-left: 4.5vw;
+            background-size: 1.8vw;
+            background-position: 2vw 50%; } }
+        @media (min-width: 650px) and (max-width: 799.9px) {
+          main .lists .lists__list .list_tasks div {
+            padding: 2vw 4vw;
+            padding-left: 7vw;
+            background-size: 2.5vw;
+            background-position: 3vw 50%; } }
+        @media (min-width: 500px) and (max-width: 649.9px) {
+          main .lists .lists__list .list_tasks div {
+            padding: 2vw 3vw;
+            padding-left: 8vw;
+            background-size: 3vw;
+            background-position: 2.5vw 50%; } }
+        @media (max-width: 499.9px) {
+          main .lists .lists__list .list_tasks div {
+            padding: 1vw 2vw;
+            padding-left: 8vw;
+            background-size: 3.5vw;
+            background-position: 3vw 50%; } }
+        @media (max-width: 399.9px) {
+          main .lists .lists__list .list_tasks div {
+            padding: 5px 7px;
+            padding-left: 30px;
+            background-size: 14px;
+            background-position: 12px 50%; } }
         main .lists .lists__list .list_tasks div[name="bugs"] {
           background-image: url(../img/bug.svg);
           background-size: 14px;
-          background-position: 20px 45%; }
+          background-position: 0.75vw 45%; }
+          @media (min-width: 800px) and (max-width: 999.9px) {
+            main .lists .lists__list .list_tasks div[name="bugs"] {
+              background-size: 1.5vw;
+              background-position: 1.5vw 45%;
+              padding-left: 4vw; } }
+          @media (min-width: 650px) and (max-width: 799.9px) {
+            main .lists .lists__list .list_tasks div[name="bugs"] {
+              background-position: 2vw 45%;
+              background-size: 2vw;
+              padding-left: 5.5vw; } }
+          @media (min-width: 500px) and (max-width: 649.9px) {
+            main .lists .lists__list .list_tasks div[name="bugs"] {
+              background-size: 2.5vw;
+              background-position: 2vw 45%;
+              padding-left: 6vw; } }
+          @media (max-width: 499.9px) {
+            main .lists .lists__list .list_tasks div[name="bugs"] {
+              background-position: 2vw 45%;
+              background-size: 2.5vw;
+              padding-left: 6vw; } }
+          @media (max-width: 399.9px) {
+            main .lists .lists__list .list_tasks div[name="bugs"] {
+              background-position: 8px 45%;
+              background-size: 10px;
+              padding-left: 24px; } }
         main .lists .lists__list .list_tasks div[name="website"] {
           background-image: url(../img/web.svg); }
         main .lists .lists__list .list_tasks div[name="server"] {
           background-image: url(../img/cloud.svg);
-          background-size: 20px; }
+          background-size: 20px;
+          padding-left: 3vw; }
+          @media (min-width: 800px) and (max-width: 999.9px) {
+            main .lists .lists__list .list_tasks div[name="server"] {
+              background-size: 2.5vw;
+              padding-left: 5.5vw; } }
+          @media (min-width: 650px) and (max-width: 799.9px) {
+            main .lists .lists__list .list_tasks div[name="server"] {
+              background-size: 3.5vw;
+              padding-left: 7.5vw; } }
+          @media (min-width: 500px) and (max-width: 649.9px) {
+            main .lists .lists__list .list_tasks div[name="server"] {
+              background-size: 4vw;
+              padding-left: 8vw; } }
+          @media (max-width: 499.9px) {
+            main .lists .lists__list .list_tasks div[name="server"] {
+              background-size: 4vw;
+              padding-left: 8.5vw; } }
+          @media (max-width: 399.9px) {
+            main .lists .lists__list .list_tasks div[name="server"] {
+              background-size: 16px;
+              padding-left: 34px; } }
         main .lists .lists__list .list_tasks div:hover, main .lists .lists__list .list_tasks div.active {
           background-color: #DEAD49; }
     main .lists .lists__list form {
@@ -490,28 +597,44 @@ main .lists {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; }
         main .lists .lists__list form fieldset:last-child {
           border: none; }
         main .lists .lists__list form fieldset input {
-          -ms-flex-preferred-size: 10px;
-          flex-basis: 10px;
-          margin-right: 15px; }
+          text-align: left;
+          width: 5%;
+          margin-right: 1%; }
         main .lists .lists__list form fieldset label {
-          -webkit-box-flex: 8;
-          -ms-flex: 8;
-          flex: 8; }
+          width: 74%;
+          font-size: 0.9vw; }
+          @media (min-width: 800px) and (max-width: 999.9px) {
+            main .lists .lists__list form fieldset label {
+              font-size: 1.6vw; } }
+          @media (min-width: 650px) and (max-width: 799.9px) {
+            main .lists .lists__list form fieldset label {
+              font-size: 2vw; } }
+          @media (min-width: 500px) and (max-width: 649.9px) {
+            main .lists .lists__list form fieldset label {
+              font-size: 2.75vw; } }
+          @media (max-width: 499.9px) {
+            main .lists .lists__list form fieldset label {
+              font-size: 3.4vw; } }
+          @media (max-width: 399.9px) {
+            main .lists .lists__list form fieldset label {
+              font-size: 13px; } }
         main .lists .lists__list form fieldset button {
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: 20px;
-          width: 24px;
+          min-width: 24px;
           height: 24px;
           border-radius: 50%;
-          border: none;
-          margin-left: 15px; }
+          border: none; }
           main .lists .lists__list form fieldset button.edit {
             background-color: #38B498;
             background-image: url(../img/edit.png); }
@@ -528,16 +651,67 @@ main .lists {
     position: relative;
     top: -40px; }
     main .lists .employees h3 {
-      font-size: 20px;
+      font-size: 1.4vw;
       font-weight: normal;
-      margin-bottom: 15px; }
+      margin-bottom: 1vw; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .lists .employees h3 {
+          font-size: 2vw;
+          margin-bottom: 1.5vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .lists .employees h3 {
+          font-size: 2.75vw;
+          margin-bottom: 2vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .lists .employees h3 {
+          font-size: 4vw;
+          margin-bottom: 2vw; } }
+      @media (max-width: 499.9px) {
+        main .lists .employees h3 {
+          font-size: 4vw;
+          margin-bottom: 2vw; } }
+      @media (max-width: 399.9px) {
+        main .lists .employees h3 {
+          font-size: 16px;
+          margin-bottom: 8px; } }
     main .lists .employees p {
-      font-size: 16px; }
+      font-size: 1vw; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .lists .employees p {
+          font-size: 1.8vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .lists .employees p {
+          font-size: 2.5vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .lists .employees p {
+          font-size: 3vw; } }
+      @media (max-width: 499.9px) {
+        main .lists .employees p {
+          font-size: 3.4vw; } }
+      @media (max-width: 399.9px) {
+        main .lists .employees p {
+          font-size: 13px; } }
   main .lists table {
     margin-top: -20px;
     border-collapse: collapse;
     width: 100%;
-    text-align: left; }
+    text-align: left;
+    font-size: 0.9vw; }
+    @media (min-width: 800px) and (max-width: 999.9px) {
+      main .lists table {
+        font-size: 1.6vw; } }
+    @media (min-width: 650px) and (max-width: 799.9px) {
+      main .lists table {
+        font-size: 2vw; } }
+    @media (min-width: 500px) and (max-width: 649.9px) {
+      main .lists table {
+        font-size: 2.75vw; } }
+    @media (max-width: 499.9px) {
+      main .lists table {
+        font-size: 3.4vw; } }
+    @media (max-width: 399.9px) {
+      main .lists table {
+        font-size: 13px; } }
     main .lists table thead th {
       padding: 10px;
       color: #38B498; }
@@ -552,4 +726,49 @@ main .lists {
     main .lists table tbody td {
       border-top: 1px solid #D2D2D2;
       padding: 10px;
-      font-size: 16px; }
+      font-size: 0.9vw; }
+      @media (min-width: 800px) and (max-width: 999.9px) {
+        main .lists table tbody td {
+          font-size: 1.6vw; } }
+      @media (min-width: 650px) and (max-width: 799.9px) {
+        main .lists table tbody td {
+          font-size: 2vw; } }
+      @media (min-width: 500px) and (max-width: 649.9px) {
+        main .lists table tbody td {
+          font-size: 2.75vw; } }
+      @media (max-width: 499.9px) {
+        main .lists table tbody td {
+          font-size: 3.4vw; } }
+      @media (max-width: 399.9px) {
+        main .lists table tbody td {
+          font-size: 13px; } }
+
+footer {
+  margin-left: 273px;
+  border-top: 1px solid #D2D2D2;
+  padding: 30px 10px;
+  font-size: 12px; }
+  @media (max-width: 799.9px) {
+    footer {
+      margin-left: 0;
+      padding-left: 40px; } }
+  footer ul {
+    list-style-type: none;
+    display: inline-block; }
+    footer ul li {
+      display: inline-block;
+      padding: 0 15px; }
+      @media (max-width: 499.9px) {
+        footer ul li {
+          padding: 0 10px; } }
+      footer ul li a {
+        text-decoration: none;
+        color: #555;
+        font-weight: bold; }
+        footer ul li a:hover {
+          text-decoration: underline; }
+  footer p {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    color: #777; }

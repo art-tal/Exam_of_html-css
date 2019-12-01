@@ -25,8 +25,10 @@ $burgundy: #C32056
 	padding: 0
 
 body
-	min-width: 300px
+	min-width: 400px
 	font-family: Arial, sans-serif
+	background-color: #E9E9E9
+
 ///////////ASIDE///////////
 aside
 	width: 250px
@@ -66,6 +68,9 @@ aside
 		box-sizing: border-box
 		width: 100%
 		padding: 30px 15px
+		@media(max-width: 799.9px)
+			padding: 0
+			margin: 30px 15px
 		div[name="menu"]
 			display: none
 			background-image:url(../img/bars-solid.svg)
@@ -136,7 +141,7 @@ aside
 main
 	margin-left: 253px
 	padding: 30px
-	background-color: #E9E9E9
+	// background-color: #E9E9E9
 	@media (max-width: 799.9px)
 		margin-left: 0
 	h1
@@ -144,7 +149,9 @@ main
 		margin: 0
 		padding: 0
 		@media (max-width: 799.9px)
-			margin-left: 40px		
+			margin-left: 40px
+			position: relative
+			z-index: 10	
 	.plans
 		margin-top: 60px
 		display: -webkit-flex
@@ -208,7 +215,7 @@ main
 					padding: 5%
 					top: -2.5vw
 					left: 2.5vw
-				@media (max-width: 299.9px)
+				@media (max-width: 399.9px)
 					width: 25%
 					top: -10px
 					left: 10px
@@ -226,8 +233,8 @@ main
 					font-size: 5vw
 				@media (max-width: 499.9px)
 					font-size: 7vw
-				@media (max-width: 299.9px)
-					font-size: 22px
+				@media (max-width: 399.9px)
+					font-size: 28px
 				&:first-line
 					font-size: 15px
 					color: #aaa
@@ -318,8 +325,8 @@ main
 					font-size: 4vw
 				@media (max-width: 499.9px)
 					font-size: 5vw
-				@media (max-width: 299.9px)
-					font-size: 16px
+				@media (max-width: 399.9px)
+					font-size: 20px
 			p
 				margin-top: 5px
 				font-size: 1vw//18px
@@ -335,9 +342,9 @@ main
 				@media (max-width: 499.9px)
 					font-size: 4vw
 					margin-bottom: 3vw
-				@media (max-width: 299.9px)
-					font-size: 12px
-					margin-bottom: 10px
+				@media (max-width: 399.9px)
+					font-size: 16px
+					margin-bottom: 12px
 			hr
 				@extend %hr
 			div.time_info
@@ -350,8 +357,8 @@ main
 					margin-top: 2vw
 				@media (max-width: 499.9px)
 					margin-top: 3vw
-				@media (max-width: 299.9px)
-					margin-top: 10px
+				@media (max-width: 399.9px)
+					margin-top: 12px
 				img
 					margin-right: 5px
 					width: 1.1vw//16px
@@ -368,8 +375,8 @@ main
 					@media (max-width: 499.9px)
 						width: 3.2vw
 						margin-right: 2px
-					@media (max-width: 299.9px)
-						width: 16px
+					@media (max-width: 399.9px)
+						width: 13px
 				span
 					font-size: 1vw
 					@media (min-width: 800px) and (max-width: 999.9px)
@@ -380,26 +387,35 @@ main
 						font-size: 2.4vw
 					@media (max-width: 499.9px)
 						font-size: 3vw
-					@media (max-width: 299.9px)
-						font-size: 14px
+					@media (max-width: 399.9px)
+						font-size: 13px
 					
 						
 //////////.grafics///////////////
 
 main
 	.lists
-		margin-top: 60px
+		// margin-top: 60px
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
 		display: -o-flex
 		display: flex
 		justify-content: space-between
+		@media (max-width: 999.9px)
+			display: block
 		.lists__list
-			flex-basis: 49%
+			// flex-basis: 49%
+			// flex-grow: 1
+			// flex-shrink: 1
+			margin-top: 60px
+			width: 49%
 			padding: 20px
 			box-sizing: border-box
 			@extend %blocks_border_shadow
+			@media (max-width: 999.9px)
+				width: 100%
+				// margin-bottom: 60px
 			.list_tasks
 				display: -webkit-flex
 				display: -moz-flex
@@ -407,33 +423,111 @@ main
 				display: -o-flex
 				display: flex
 				align-items: center
-				padding: 20px
+				padding: 1vw//20px
 				background-color: $yellow
-				font-size: 16px
+				font-size: 1vw//16px
 				color: #fff
 				width: 100%
 				box-sizing: border-box
 				position: relative
 				top: -40px
+				@media (min-width: 800px) and (max-width: 999.9px)
+					padding: 2vw
+					font-size: 1.75vw
+				@media (min-width: 650px) and (max-width: 799.9px)
+					padding: 2.5vw
+					font-size: 2vw		
+				@media (min-width: 500px) and (max-width: 649.9px)
+					padding: 3.5vw
+					font-size: 3vw			
+				@media (max-width: 499.9px)
+					padding: 3vw
+					font-size: 3.5vw
+				@media (max-width: 399.9px)
+					padding: 10px
+					font-size: 12px
 				h4
 					margin-right: 15px
 					font-weight: normal
+					// flex: 1 1 1
 
 				div
-					padding: 15px
-					padding-left: 50px
+					// flex: 1 1 1
+					padding: 0.7vw 1.5vw//15px
+					padding-left: 2.5vw//50px
 					background-repeat: no-repeat
-					background-size: 16px
-					background-position: 20px 50%
+					background-size: 1vw//16px
+					background-position: 0.75vw 50% //20px 50%
+					@media (min-width: 800px) and (max-width: 999.9px)
+						padding: 1vw 2vw
+						padding-left: 4.5vw
+						background-size: 1.8vw
+						background-position: 2vw 50%
+					@media (min-width: 650px) and (max-width: 799.9px)
+						padding: 2vw 4vw
+						padding-left: 7vw
+						background-size: 2.5vw
+						background-position: 3vw 50%		
+					@media (min-width: 500px) and (max-width: 649.9px)
+						padding: 2vw 3vw
+						padding-left: 8vw
+						background-size: 3vw
+						background-position: 2.5vw 50%
+					@media (max-width: 499.9px)
+						padding: 1vw 2vw
+						padding-left: 8vw
+						background-size: 3.5vw
+						background-position: 3vw 50%
+					@media (max-width: 399.9px)
+						padding: 5px 7px
+						padding-left: 30px
+						background-size: 14px
+						background-position: 12px 50%
 					&[name="bugs"]
 						background-image: url(../img/bug.svg)
 						background-size: 14px
-						background-position: 20px 45%
+						background-position: 0.75vw 45%
+						@media (min-width: 800px) and (max-width: 999.9px)
+							background-size: 1.5vw
+							background-position: 1.5vw 45%
+							padding-left: 4vw
+						@media (min-width: 650px) and (max-width: 799.9px)
+							background-position: 2vw 45%
+							background-size: 2vw
+							padding-left: 5.5vw
+						@media (min-width: 500px) and (max-width: 649.9px)
+							background-size: 2.5vw
+							background-position: 2vw 45%
+							padding-left: 6vw		
+						@media (max-width: 499.9px)
+							background-position: 2vw 45%
+							background-size: 2.5vw
+							padding-left: 6vw
+						@media (max-width: 399.9px)
+							background-position: 8px 45%
+							background-size: 10px
+							padding-left: 24px
 					&[name="website"]
 						background-image: url(../img/web.svg)
 					&[name="server"]
 						background-image: url(../img/cloud.svg)
 						background-size: 20px
+						padding-left: 3vw
+						@media (min-width: 800px) and (max-width: 999.9px)
+							background-size: 2.5vw
+							padding-left: 5.5vw
+						@media (min-width: 650px) and (max-width: 799.9px)
+							background-size: 3.5vw
+							padding-left: 7.5vw
+						@media (min-width: 500px) and (max-width: 649.9px)
+							background-size: 4vw
+							padding-left: 8vw			
+						@media (max-width: 499.9px)
+							background-size: 4vw
+							padding-left: 8.5vw
+						@media (max-width: 399.9px)
+							background-size: 16px
+							padding-left: 34px
 					&:hover,
 					&.active
 						background-color: #DEAD49
@@ -448,25 +542,43 @@ main
 					display: -ms-flex
 					display: -o-flex
 					display: flex
-					// justify-content: space-between
+					justify-content: space-between
 					align-items: center
 					&:last-child
 						border: none
 					input
-						flex-basis: 10px
-						margin-right: 15px
+						// flex-basis: 10px
+						text-align: left
+						width: 5%
+						margin-right: 1%//15px
 					label
-						flex: 8
+						// flex: 8
+						width: 74%
+						font-size: 0.9vw
+						@media (min-width: 800px) and (max-width: 999.9px)
+							font-size: 1.6vw
+						@media (min-width: 650px) and (max-width: 799.9px)
+							font-size: 2vw
+						@media (min-width: 500px) and (max-width: 649.9px)
+							font-size: 2.75vw
+						@media (max-width: 499.9px)
+							font-size: 3.4vw
+						@media (max-width: 399.9px)
+							font-size: 13px
 					button
-						// flex: 20px
+						// flex-basis: 35px
+						// width: 10%
+						// float: right
 						background-repeat: no-repeat
 						background-position: 50% 50%
 						background-size: 20px
-						width: 24px
+						min-width: 24px
 						height: 24px
 						border-radius: 50%
 						border: none
-						margin-left: 15px
+						// margin-left: 5px
+						// @media (max-width: 399.9px)
+
 						&.edit
 							background-color: #38B498
 							background-image: url(../img/edit.png)
@@ -482,16 +594,52 @@ main
 			position: relative
 			top: -40px
 			h3
-				font-size: 20px
+				font-size: 1.4vw//20px
 				font-weight: normal
-				margin-bottom: 15px
+				margin-bottom: 1vw//15px
+				@media (min-width: 800px) and (max-width: 999.9px)
+					font-size: 2vw
+					margin-bottom: 1.5vw
+				@media (min-width: 650px) and (max-width: 799.9px)
+					font-size: 2.75vw
+					margin-bottom: 2vw
+				@media (min-width: 500px) and (max-width: 649.9px)
+					font-size: 4vw
+					margin-bottom: 2vw
+				@media (max-width: 499.9px)
+					font-size: 4vw
+					margin-bottom: 2vw
+				@media (max-width: 399.9px)
+					font-size: 16px
+					margin-bottom: 8px
 			p
-				font-size: 16px
+				font-size: 1vw//16px
+				@media (min-width: 800px) and (max-width: 999.9px)
+					font-size: 1.8vw
+				@media (min-width: 650px) and (max-width: 799.9px)
+					font-size: 2.5vw
+				@media (min-width: 500px) and (max-width: 649.9px)
+					font-size: 3vw
+				@media (max-width: 499.9px)
+					font-size: 3.4vw
+				@media (max-width: 399.9px)
+					font-size: 13px
 		table
 			margin-top: -20px
 			border-collapse: collapse
 			width: 100%
 			text-align: left
+			font-size: 0.9vw
+			@media (min-width: 800px) and (max-width: 999.9px)
+				font-size: 1.6vw	
+			@media (min-width: 650px) and (max-width: 799.9px)
+				font-size: 2vw				
+			@media (min-width: 500px) and (max-width: 649.9px)
+				font-size: 2.75vw				
+			@media (max-width: 499.9px)
+				font-size: 3.4vw
+			@media (max-width: 399.9px)
+				font-size: 13px
 			thead
 				th
 					padding: 10px
@@ -508,4 +656,44 @@ main
 				td
 					border-top: 1px solid $border
 					padding: 10px
-					font-size: 16px
+					font-size: 0.9vw//16px
+					@media (min-width: 800px) and (max-width: 999.9px)
+						font-size: 1.6vw
+					@media (min-width: 650px) and (max-width: 799.9px)
+						font-size: 2vw			
+					@media (min-width: 500px) and (max-width: 649.9px)
+						font-size: 2.75vw			
+					@media (max-width: 499.9px)
+						font-size: 3.4vw
+					@media (max-width: 399.9px)
+						font-size: 13px
+
+//////////////FOOTER/////////////////
+
+footer
+	margin-left: 273px
+	border-top: 1px solid $border
+	padding: 30px 10px
+	font-size: 12px
+	@media (max-width: 799.9px)
+		margin-left: 0
+		padding-left: 40px
+	ul
+		list-style-type: none
+		display: inline-block
+		li
+			display: inline-block
+			padding: 0 15px
+			@media (max-width: 499.9px)
+				padding: 0 10px
+			a
+				text-decoration: none
+				color: #555
+				font-weight: bold
+				&:hover
+					text-decoration: underline
+	p
+		display: inline-block
+		float: right
+		margin-right: 20px
+		color: #777
