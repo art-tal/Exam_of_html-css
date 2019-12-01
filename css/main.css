@@ -9,7 +9,7 @@ aside header h1, main h1 {
   margin: 0;
   color: #333; }
 
-main .plans .plans__plan, main .grafics .grafics__item, main .lists .lists__list, main.user_profile .wrap .user {
+main .plans .plans__plan, main .grafics .grafics__item, main .lists .lists__list, main.user_profile .wrap .user, main.user_profile .wrap article.edit {
   border: 1px solid #D2D2D2;
   -webkit-box-shadow: 3px 3px 3px #bbb;
   box-shadow: 3px 3px 3px #bbb;
@@ -817,3 +817,58 @@ main.user_profile .wrap {
     main.user_profile .wrap .user p {
       color: #777;
       line-height: 1.5; }
+  main.user_profile .wrap article.edit {
+    width: 64%;
+    margin-top: 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px; }
+    main.user_profile .wrap article.edit header {
+      padding: 20px;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #C32056;
+      color: #fff;
+      position: relative;
+      top: -40px; }
+      main.user_profile .wrap article.edit header h3 {
+        font-weight: 200;
+        font-size: 20px;
+        margin-bottom: 15px; }
+      main.user_profile .wrap article.edit header p {
+        font-size: 16px; }
+    main.user_profile .wrap article.edit form {
+      margin-top: -20px; }
+      main.user_profile .wrap article.edit form fieldset {
+        border: none;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        main.user_profile .wrap article.edit form fieldset .field {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          margin-right: 15px;
+          margin-bottom: 15px; }
+          main.user_profile .wrap article.edit form fieldset .field:last-child {
+            margin-right: 0; }
+          main.user_profile .wrap article.edit form fieldset .field label {
+            display: block;
+            color: #777;
+            font-size: 14px; }
+          main.user_profile .wrap article.edit form fieldset .field input, main.user_profile .wrap article.edit form fieldset .field textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #D2D2D2;
+            background: none;
+            padding: 10px 0; }
+          main.user_profile .wrap article.edit form fieldset .field textarea {
+            height: 70px; }
